@@ -1,0 +1,12 @@
+language: java
+
+dist: xenial
+
+script: ./run.sh
+
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: . ./configs/travis.sh && . ./configs/deploy.sh
+  on:
+    branch: master
