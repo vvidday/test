@@ -1,15 +1,15 @@
-Feb 13, 2023 12:49:02 AM reposense.parser.CsvParser validateHeader
+Feb 13, 2023 1:34:27 AM reposense.parser.CsvParser validateHeader
 INFO: Parsed header of CSV file, repo-config.csv, and recognized columns: Ignore Standalone Config,  Repository's Location,  Skip Ignored File Analysis,  Branch,  Shallow Cloning,  File formats,  Ignore Glob List,  Ignore Authors List,  Find Previous Authors,  File Size Limit,  Ignore File Size Limit,  Ignore Commits List
-Feb 13, 2023 12:49:02 AM reposense.parser.CsvParser validateHeader
+Feb 13, 2023 1:34:27 AM reposense.parser.CsvParser validateHeader
 INFO: Parsed header of CSV file, author-config.csv, and recognized columns: Author's Emails,  Repository's Location,  Branch,  Author's Git Host ID,  Author's Display Name,  Ignore Glob List,  Author's Git Author Name
-Feb 13, 2023 12:49:02 AM reposense.RepoSense getRepoConfigurations
+Feb 13, 2023 1:34:27 AM reposense.RepoSense getRepoConfigurations
 WARNING: No valid configurations in the author-config.csv.
 reposense.parser.InvalidCsvException: No valid configurations in the author-config.csv.
 	at reposense.parser.CsvParser.parse(CsvParser.java:112)
 	at reposense.RepoSense.getRepoConfigurations(RepoSense.java:149)
 	at reposense.RepoSense.main(RepoSense.java:67)
 
-Feb 13, 2023 12:49:02 AM reposense.git.GitConfig getGlobalGitLfsConfig
+Feb 13, 2023 1:34:27 AM reposense.git.GitConfig getGlobalGitLfsConfig
 WARNING: Could not get global git lfs config
 java.lang.RuntimeException: reposense.system.CommandRunnerProcessException: Error returned from command git config --global --list on path . :
 fatal: unable to read config file '/home/runner/.gitconfig': No such file or directory
@@ -25,23 +25,23 @@ fatal: unable to read config file '/home/runner/.gitconfig': No such file or dir
 	at reposense.system.CommandRunner.runCommand(CommandRunner.java:21)
 	... 3 more
 
-Feb 13, 2023 12:49:02 AM reposense.report.RepoCloner spawnCloneProcess
+Feb 13, 2023 1:34:27 AM reposense.report.RepoCloner spawnCloneProcess
 INFO: Cloning in parallel from https://github.com/reposense/RepoSense.git...
-Feb 13, 2023 12:49:02 AM reposense.report.RepoCloner waitForCloneProcess
+Feb 13, 2023 1:34:27 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Waiting for cloning of https://github.com/reposense/RepoSense.git to complete...
-Feb 13, 2023 12:49:06 AM reposense.report.RepoCloner waitForCloneProcess
+Feb 13, 2023 1:34:32 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Cloning of https://github.com/reposense/RepoSense.git completed!
-Feb 13, 2023 12:49:06 AM reposense.report.ReportGenerator analyzeRepos
+Feb 13, 2023 1:34:32 AM reposense.report.ReportGenerator analyzeRepos
 INFO: [1/1] Analyzing https://github.com/reposense/RepoSense.git (master)...
-Feb 13, 2023 12:49:07 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+Feb 13, 2023 1:34:32 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
 INFO: Extracting relevant file info from https://github.com/reposense/RepoSense.git (master)...
-Feb 13, 2023 12:49:08 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+Feb 13, 2023 1:34:33 AM reposense.commits.CommitInfoExtractor extractCommitInfos
 INFO: Extracting commits info for https://github.com/reposense/RepoSense.git (master)...
-Feb 13, 2023 12:49:08 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+Feb 13, 2023 1:34:33 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
 INFO: Analyzing commits info for https://github.com/reposense/RepoSense.git (master)...
-Feb 13, 2023 12:49:08 AM reposense.report.ReportGenerator analyzeRepo
+Feb 13, 2023 1:34:33 AM reposense.report.ReportGenerator analyzeRepo
 INFO: Analysis of https://github.com/reposense/RepoSense.git (master) completed!
-Feb 13, 2023 12:49:08 AM reposense.report.ReportGenerator generateReposReport
+Feb 13, 2023 1:34:34 AM reposense.report.ReportGenerator generateReposReport
 INFO: The report is generated at /home/runner/work/test/test/reposense-report
-Feb 13, 2023 12:49:08 AM reposense.RepoSense main
-INFO: Elapsed processing time: 6.42 second(s)
+Feb 13, 2023 1:34:34 AM reposense.RepoSense main
+INFO: Elapsed processing time: 7.07 second(s)
